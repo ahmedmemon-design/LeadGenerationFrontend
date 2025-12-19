@@ -91,7 +91,7 @@ export default function GenerateLeads() {
     const token = localStorage.getItem("token");
 
     try {
-      const res = await fetch(`http://localhost:8000/generate-${platform}`, {
+      const res = await fetch(`https://ahmed7241-leadgen.hf.space/generate-${platform}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -162,7 +162,7 @@ export default function GenerateLeads() {
   const downloadAllPDF = async () => {
     const token = localStorage.getItem("token");
 
-    const res = await fetch("http://localhost:8000/download-pdf-bulk", {
+    const res = await fetch("https://ahmed7241-leadgen.hf.space/download-pdf-bulk", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -450,4 +450,5 @@ export default function GenerateLeads() {
       )}
     </div>
   );
+
 }
