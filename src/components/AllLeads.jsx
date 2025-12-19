@@ -22,7 +22,7 @@ export default function AllLeads() {
     }
 
     try {
-      const res = await fetch("http://localhost:8000/my-leads", {
+      const res = await fetch("https://ahmed7241-leadgen.hf.space/my-leads", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -48,7 +48,7 @@ export default function AllLeads() {
     const newStatus = currentStatus === 'Yes' ? 'No' : 'Yes'; 
 
     try {
-      const res = await fetch("http://localhost:8000/update-pitch-status", {
+      const res = await fetch("https://ahmed7241-leadgen.hf.space/update-pitch-status", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -81,7 +81,7 @@ export default function AllLeads() {
     const token = localStorage.getItem("token");
 
     const res = await fetch(
-      `http://localhost:8000/download-platform-leads?platform=${activeTab}`,
+      `https://ahmed7241-leadgen.hf.space/download-platform-leads?platform=${activeTab}`,
       {
         headers: { Authorization: `Bearer ${token}` },
       }
@@ -469,4 +469,5 @@ const renderTwitterCard = (l) => {
     </div>
     </div>
   );
+
 }
