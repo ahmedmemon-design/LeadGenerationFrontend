@@ -25,7 +25,7 @@ export default function AuthModal({ mode, open, onClose, onSuccess }) {
   const handleSignup = async () => {
     setLoading(true);
     
-    const res = await fetch("http://localhost:8000/signup", {
+    const res = await fetch("https://ahmed7241-leadgen.hf.space/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -52,7 +52,7 @@ export default function AuthModal({ mode, open, onClose, onSuccess }) {
   const handleLogin = async () => {
     setLoading(true);
     
-    const res = await fetch("http://localhost:8000/login", {
+    const res = await fetch("https://ahmed7241-leadgen.hf.space/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -144,3 +144,4 @@ export default function AuthModal({ mode, open, onClose, onSuccess }) {
     </div>
   );
 }
+
