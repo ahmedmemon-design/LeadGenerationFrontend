@@ -17,7 +17,7 @@ export default function AuthProvider({ children }) {
       }
 
       try {
-        const res = await fetch("http://localhost:8000/me", {
+        const res = await fetch("https://ahmed7241-leadgen.hf.space/me", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -48,3 +48,4 @@ export default function AuthProvider({ children }) {
     </AuthContext.Provider>
   );
 }
+
