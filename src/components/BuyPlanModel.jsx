@@ -20,7 +20,7 @@ export default function BuyPlanModal({ open, onClose, plan }) {
     setLoading(true);
     setResponseMsg(null);
 
-    const res = await fetch("http://localhost:8000/api/buy-plan", {
+    const res = await fetch("https://ahmed7241-leadgen.hf.space/api/buy-plan", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -122,3 +122,4 @@ export default function BuyPlanModal({ open, onClose, plan }) {
     </div>
   );
 }
+
