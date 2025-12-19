@@ -12,7 +12,7 @@ export default function VerifyModal({ email, open, onClose }) {
   const verify = async () => {
     setMessage("");
 
-    const res = await fetch("http://localhost:8000/verify-email", {
+    const res = await fetch("https://ahmed7241-leadgen.hf.space/verify-email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, code }),
@@ -92,3 +92,4 @@ export default function VerifyModal({ email, open, onClose }) {
     </AnimatePresence>
   );
 }
+
